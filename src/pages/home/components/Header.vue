@@ -1,8 +1,8 @@
 <template class="home">
 <div class="header">
-<div class="header-left">Back</div>
-<div class="header-input">Search Keyword</div>
-<div class="header-right">City</div>
+<div class="header-left"><div class="back-icon"><a-icon type="left" /></div></div>
+<div class="header-input"> <a-icon type="search" /> Search Keyword</div>
+<div class="header-right">City <div class="arrow-icon"><a-icon type="caret-down" /></div></div>
 </div>
 </template>
 
@@ -23,6 +23,9 @@ export default {
     .header-left
         width: .64rem
         float: left
+        .back-icon
+            text-align: center
+            font-size: .4rem
 
     .header-input
         flex: 1
@@ -33,10 +36,15 @@ export default {
         background: #fff
         border-radius: .1rem
         color: #ccc
+        padding-left: .1rem
 
     .header-right
         text-align: center
         width: 1.24rem
         float: right
+        .arrow-icon
+            font-size: .2rem
+            display:inline-block
+
 
 </style>
