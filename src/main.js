@@ -5,8 +5,8 @@ import Antd from 'ant-design-vue'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
+import 'styles/reset.css'
+import 'styles/border.css'
 import 'ant-design-vue/dist/antd.css'
 
 Vue.config.productionTip = false
