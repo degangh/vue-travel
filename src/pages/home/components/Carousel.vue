@@ -30,8 +30,9 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper {
+  overflow hidden;
   width: 100%;
-  height: 20vw;
+  height: 60vw;
 
   .swiper-image {
     width: 100%;
