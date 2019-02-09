@@ -91,6 +91,7 @@ export default {
 <style lang='stylus' scoped>
 @import '~styles/mixin.styl'
 .icons {
+    margin-top: .2rem
     overflow: hidden
     height: 0
     padding-bottom: 50%
