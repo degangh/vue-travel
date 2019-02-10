@@ -5,6 +5,7 @@
 <home-carousel></home-carousel>
 <home-icons></home-icons>
 <home-recommend></home-recommend>
+<home-trip></home-trip>
 </div>
 </template>
 
@@ -14,6 +15,7 @@ import HomeSwiper from './components/Swiper'
 import HomeCarousel from './components/Carousel'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
+import HomeTrip from './components/Trip'
 export default {
   name: 'Home',
   components: {
@@ -21,7 +23,8 @@ export default {
     HomeSwiper: HomeSwiper,
     HomeCarousel: HomeCarousel,
     HomeIcons: HomeIcons,
-    HomeRecommend: HomeRecommend
+    HomeRecommend: HomeRecommend,
+    HomeTrip: HomeTrip
   }
 }
 </script>
