@@ -16,6 +16,7 @@ import HomeCarousel from './components/Carousel'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeTrip from './components/Trip'
+import axios from 'axios'
 export default {
   name: 'Home',
   components: {
@@ -25,7 +26,22 @@ export default {
     HomeIcons: HomeIcons,
     HomeRecommend: HomeRecommend,
     HomeTrip: HomeTrip
+  },
+
+  mounted () {
+    this.getHomeInfo()
+  },
+  methods: {
+    getHomeInfo () {
+      axios.get('/api/index.json')
+        .then(this.getHomeInfoSuccess)
+    },
+
+    getHomeInfoSuccess (res) {
+      console.log(res)
+    }
   }
+
 }
 </script>
 
