@@ -38,7 +38,7 @@ export default {
     },
 
     getHomeInfoSuccess (res) {
-      console.log(res)
+      console.log(res.data)
     }
   }
 
