@@ -41,17 +41,17 @@ export default {
 <style lang='stylus' scoped>
 @import '~styles/mixin.styl'
 .icons {
-    margin-top: .2rem
+    margin-top: .05rem
     overflow: hidden
     height: 0
-    padding-bottom: 50%
+    padding-bottom: 40%
 
     .icon {
         position: relative
         display: inline-block
         width: 24%
         height: 0
-        padding-bottom: 25%
+        padding-bottom: 20%
 
         .icon-content {
             position: absolute
@@ -66,7 +66,7 @@ export default {
                 display: block
                 margin: 0 auto
                 height: 100%
-                font-size: 0.8rem
+                font-size: 0.6rem
                 text-align: center
                 color: #c0c0c0
             }
