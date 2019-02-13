@@ -2,16 +2,15 @@
 <div>
 <home-header></home-header>
 
-<home-carousel></home-carousel>
-<home-icons></home-icons>
-<home-recommend></home-recommend>
-<home-trip></home-trip>
+<home-carousel :carouselList = "data.carouselList"></home-carousel>
+<home-icons :list = "iconList" ></home-icons>
+<home-recommend :recommendList = "data.recommendList"></home-recommend>
+<home-trip :tripList = "data.tripList"></home-trip>
 </div>
 </template>
 
 <script>
 import HomeHeader from './components/Header'
-import HomeSwiper from './components/Swiper'
 import HomeCarousel from './components/Carousel'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
@@ -21,7 +20,6 @@ export default {
   name: 'Home',
   components: {
     HomeHeader: HomeHeader,
-    HomeSwiper: HomeSwiper,
     HomeCarousel: HomeCarousel,
     HomeIcons: HomeIcons,
     HomeRecommend: HomeRecommend,
@@ -31,6 +29,14 @@ export default {
   mounted () {
     this.getHomeInfo()
   },
+
+  data () {
+    return {
+      data: {},
+      iconList: []
+    }
+  },
+
   methods: {
     getHomeInfo () {
       axios.get('/api/index.json')
@@ -38,7 +44,10 @@ export default {
     },
 
     getHomeInfoSuccess (res) {
-      console.log(res.data)
+      
+      this.data = res.data.data
+      this.iconList = this.data.iconList //?why
+
     }
   }
 

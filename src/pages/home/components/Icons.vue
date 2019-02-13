@@ -18,70 +18,20 @@
 <script>
 export default {
   name: 'HomeIcons',
-  data () {
-    return {
-      iconList: [
-        {
-          id: '0001',
-          type: 'car',
-          desc: 'Car Rental'
-        },
-        {
-          id: '0002',
-          type: 'coffee',
-          desc: 'Cafe'
-        },
-        {
-          id: '0003',
-          type: 'shop',
-          desc: 'Restaurant'
-        },
-        {
-          id: '0004',
-          type: 'wallet',
-          desc: 'Money'
-        },
-        {
-          id: '0005',
-          type: 'phone',
-          desc: 'Helpline'
-        },
-        {
-          id: '0006',
-          type: 'shopping',
-          desc: 'Shopping'
-        },
-        {
-          id: '0007',
-          type: 'home',
-          desc: 'Hotel'
-        },
-        {
-          id: '0008',
-          type: 'camera',
-          desc: 'Place to go'
-        },
-        {
-          id: '0009',
-          type: 'wifi',
-          desc: 'Internet'
-        }
-      ]
-    }
+  props: {
+    list: Array
   },
 
   computed: {
-    pages () {
+    pages: function() {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
         }
         pages[page].push(item)
       })
-
-      console.log(pages)
       return pages
     }
   }

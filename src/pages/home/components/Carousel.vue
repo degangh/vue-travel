@@ -9,21 +9,8 @@
 <script>
 export default {
   name: 'HomeCarousel',
-  data () {
-    return {
-      carouselList: [
-        {
-          id: '001',
-          imgUrl:
-            'https://media-cdn.tripadvisor.com/media/photo-f/05/47/e4/65/bird-tours-sa-private.jpg'
-        },
-        {
-          id: '002',
-          imgUrl:
-            'https://media-cdn.tripadvisor.com/media/photo-s/0d/f4/fe/a1/2-day-kangaroo-island.jpg'
-        }
-      ]
-    }
+  props: {
+    carouselList: Array
   }
 }
 </script>

@@ -17,29 +17,8 @@
 <script>
 export default{
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/03/69/49/6a/waterfall-gully-to-mount.jpg',
-          title: 'Waterfall Gully',
-          desc: 'Waterfall Gully is an eastern suburb of the South Australian capital city of Adelaide. It is located in the foothills of the Mount Lofty Ranges around 5 km (3.1 mi) east-south-east of the Adelaide city centre.'
-        },
-        {
-          id: '0002',
-          imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/03/69/49/6a/waterfall-gully-to-mount.jpg',
-          title: 'Waterfall Gully',
-          desc: 'Waterfall Gully is an eastern suburb of the South Australian capital city of Adelaide. It is located in the foothills of the Mount Lofty Ranges around 5 km (3.1 mi) east-south-east of the Adelaide city centre.'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/03/69/49/6a/waterfall-gully-to-mount.jpg',
-          title: 'Waterfall Gully',
-          desc: 'Waterfall Gully is an eastern suburb of the South Australian capital city of Adelaide. It is located in the foothills of the Mount Lofty Ranges around 5 km (3.1 mi) east-south-east of the Adelaide city centre.'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>
