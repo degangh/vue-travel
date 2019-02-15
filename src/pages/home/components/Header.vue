@@ -2,14 +2,15 @@
 <div class="header">
 <div class="header-left"><div class="back-icon"><a-icon type="left" /></div></div>
 <div class="header-input"> <a-icon type="search" /> Search Keyword</div>
-<div class="header-right">City <div class="arrow-icon"><a-icon type="caret-down" /></div></div>
+<div class="header-right">{{city}} <div class="arrow-icon"><a-icon type="caret-down" /></div></div>
 </div>
 </template>
 
 <script>
 
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: ['city'],
 }
 </script>
 
@@ -41,7 +42,7 @@ export default {
 
     .header-right
         text-align: center
-        width: 1.24rem
+        width: 1.8rem
         float: right
         .arrow-icon
             font-size: .2rem

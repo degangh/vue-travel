@@ -1,6 +1,6 @@
 <template class="home">
 <div>
-<home-header></home-header>
+<home-header :city="data.city"></home-header>
 
 <home-carousel :carouselList = "data.carouselList"></home-carousel>
 <home-icons :list = "iconList" ></home-icons>
