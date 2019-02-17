@@ -1,0 +1,34 @@
+<template>
+<div class='header'>Destinations
+  <div class="header-back"><a-icon type="left" /></div>
+</div>
+
+</template>
+
+
+<script>
+export default{
+  name: 'CityHeader'
+}
+</script>
+
+
+<style lang='stylus' scoped>
+  @import '~styles/variables.styl'
+  .header
+    position:relative
+    overflow: hidden 
+    line-height: 0.86rem
+    height: 0.86rem
+    text-align: center
+    color: #fff
+    background: $bgColor
+    font-size: .32rem
+    .header-back
+      width: .64rem
+      text-align: center
+      font-size: .4rem
+      position: absolute
+      top: 0
+      left: 0
+</style>
