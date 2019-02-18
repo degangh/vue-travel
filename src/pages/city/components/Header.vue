@@ -1,6 +1,6 @@
 <template>
 <div class='header'>Destinations
-  <div class="header-back"><a-icon type="left" /></div>
+  <router-link to='/'><div class="header-back"><a-icon type="left" /></div></router-link>
 </div>
 
 </template>
@@ -31,4 +31,5 @@ export default{
       position: absolute
       top: 0
       left: 0
+      color: #fff;
 </style>
