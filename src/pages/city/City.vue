@@ -1,8 +1,6 @@
 <template>
 <city-header></city-header>
 </template>
-
-
 <script>
 import CityHeader from './components/Header.vue'
 export default{
@@ -12,7 +10,5 @@ export default{
   }
 }
 </script>
-
-
 <style lang='stylus' scoped>
 </style>

@@ -5,19 +5,17 @@
 
 </template>
 
-
 <script>
 export default{
   name: 'CityHeader'
 }
 </script>
 
-
 <style lang='stylus' scoped>
   @import '~styles/variables.styl'
   .header
     position:relative
-    overflow: hidden 
+    overflow: hidden
     line-height: $headerHeight
     height: $headerHeight
     text-align: center

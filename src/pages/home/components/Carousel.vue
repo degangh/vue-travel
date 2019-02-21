@@ -17,10 +17,8 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper {
-  
   width: 100%;
   height: 50vw;
-
   .swiper-image {
     width: 100%;
     height: 50vw;
@@ -29,6 +27,6 @@ export default {
 .wrapper >>> .ant-carousel .slick-dots {
   bottom: 1.2rem !important
 }
-  
+
 }
 </style>

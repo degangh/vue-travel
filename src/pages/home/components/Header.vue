@@ -12,7 +12,7 @@
 
 export default {
   name: 'HomeHeader',
-  props: ['city'],
+  props: ['city']
 }
 </script>
 

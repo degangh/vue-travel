@@ -44,13 +44,10 @@ export default {
     },
 
     getHomeInfoSuccess (res) {
-      
       this.data = res.data.data
-      this.iconList = this.data.iconList //?why
-
+      this.iconList = this.data.iconList // ?why
     }
   }
-
 }
 </script>
 
