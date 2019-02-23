@@ -1,110 +1,112 @@
 <template>
-<div class='list'>
-    <div class="area">
-        <div class="title border-topbottom">Current Location</div>
-        <div class="button-list">
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
+<div class='list' ref="wrapper">
+    <div>
+        <div class="area">
+            <div class="title border-topbottom">Current Location</div>
+            <div class="button-list">
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="area">
-        <div class="title border-topbottom">Hot Places</div>
-        <div class="button-list">
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
-            </div>
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
-            </div>
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
-            </div>
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
-            </div>
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
-            </div>
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
-            </div>
-            <div class="button-wrapper">
-                <div class="button">Adelaide</div>
+        <div class="area">
+            <div class="title border-topbottom">Hot Places</div>
+            <div class="button-list">
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">Adelaide</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-        </div>
+        <div class="area">
+            <div class="title border-topbottom">A</div>
+            <div class="item-list">
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+            </div>
 
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-        </div>
+            <div class="title border-topbottom">A</div>
+            <div class="item-list">
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+            </div>
 
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-        </div>
+            <div class="title border-topbottom">A</div>
+            <div class="item-list">
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+            </div>
 
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-        </div>
+            <div class="title border-topbottom">A</div>
+            <div class="item-list">
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+            </div>
 
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-        </div>
+            <div class="title border-topbottom">A</div>
+            <div class="item-list">
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+            </div>
 
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-        </div>
+            <div class="title border-topbottom">A</div>
+            <div class="item-list">
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+            </div>
 
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
-            <div class="item border-bottom">Adelaide</div>
+            <div class="title border-topbottom">A</div>
+            <div class="item-list">
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+                <div class="item border-bottom">Adelaide</div>
+            </div>
         </div>
     </div>
   
@@ -113,8 +115,12 @@
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
 export default{
-  name: 'CityList'
+  name: 'CityList',
+  mounted () {
+      this.scroll = new Bscroll(this.$refs.wrapper)
+  }
 }
 </script>
 
@@ -136,7 +142,7 @@ export default{
     right: 0
     bottom:0
     .title
-        line-height: .4rem
+        line-height: .54rem
         padding-left .2rem
         background: #eee
         color: #666
