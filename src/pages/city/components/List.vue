@@ -13,103 +13,23 @@
         <div class="area">
             <div class="title border-topbottom">Hot Places</div>
             <div class="button-list">
-                <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
+                <div v-for = "item of hotCities" :key = "item.id" class="button-wrapper">
+                    <div class="button">{{item.name}}</div>
                 </div>
-                <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
-                </div>
+                
             </div>
         </div>
 
-        <div class="area">
-            <div class="title border-topbottom">A</div>
+        <div class="area" v-for = "(item, index) of cities" :key="index">
+            <div class="title border-topbottom">{{index}}</div>
             <div class="item-list">
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-            </div>
+                <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</div>
 
-            <div class="title border-topbottom">A</div>
-            <div class="item-list">
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-            </div>
-
-            <div class="title border-topbottom">A</div>
-            <div class="item-list">
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-            </div>
-
-            <div class="title border-topbottom">A</div>
-            <div class="item-list">
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-            </div>
-
-            <div class="title border-topbottom">A</div>
-            <div class="item-list">
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-            </div>
-
-            <div class="title border-topbottom">A</div>
-            <div class="item-list">
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-            </div>
-
-            <div class="title border-topbottom">A</div>
-            <div class="item-list">
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
-                <div class="item border-bottom">Adelaide</div>
             </div>
         </div>
+
+        
     </div>
-  
 </div>
 
 </template>
@@ -117,6 +37,10 @@
 <script>
 import Bscroll from 'better-scroll'
 export default{
+    props: {
+        hotCities: Array,
+        cities: Object
+    },
   name: 'CityList',
   mounted () {
       this.scroll = new Bscroll(this.$refs.wrapper)

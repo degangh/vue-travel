@@ -1,13 +1,8 @@
 <template>
 <div class='list'>
     <ul>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
+        <li class="item" v-for = "(item , index) of cities" :key = "index">{{index.toUpperCase()}}</li>
+        
         
     </ul>
 
@@ -17,7 +12,10 @@
 
 <script>
 export default{
-  name: 'CityAlphabet'
+  name: 'CityAlphabet',
+  props: {
+      cities: Object
+  }
 }
 </script>
 
@@ -29,12 +27,12 @@ export default{
     justify-content: center
     position: absolute
     right: 0
-    top: 1.58rem
+    top: 1.3rem
     bottom: 0
     width: .4rem
     .item
         text-align:center
-        line-height: .67rem
+        line-height: .42rem
         color: $bgColor
   
 </style>
