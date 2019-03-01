@@ -1,7 +1,11 @@
 <template>
 <div class='list'>
     <ul>
-        <li class="item" v-for = "(item , index) of cities" :key = "index">{{index.toUpperCase()}}</li>
+        <li class="item" 
+        v-for = "(item , index) of cities" 
+        :key = "index"
+        @click="handleLetterClick"
+        >{{index.toUpperCase()}}</li>
         
         
     </ul>
@@ -15,6 +19,12 @@ export default{
   name: 'CityAlphabet',
   props: {
       cities: Object
+  },
+  methods: {
+      handleLetterClick (e) {
+          this.$emit('change', e.target.innerText)
+          console.log(e.target.innerText)
+      }
   }
 }
 </script>
