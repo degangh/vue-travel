@@ -52,7 +52,7 @@ export default{
           if (this.letter)
           {
               const ele = this.$refs[this.letter][0]
-              console.log(ele)
+              
               this.scroll.scrollToElement(ele)
           }
       }
