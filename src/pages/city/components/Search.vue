@@ -5,7 +5,7 @@
     </div>
     <div class="search-content">
       <ul>
-        <li>123</li>
+        <li v-for = "item in list" :key = "item.id">{{item.name}}</li>
       </ul>
     </div>
   </div>
@@ -34,7 +34,7 @@ export default{
         const result = []
         for (let i in this.cities) {
           this.cities[i].forEach((value) => {
-            if (value.name.indexOf(this.keyword) > -1 ) {
+            if (value.name.toLowerCase().indexOf(this.keyword.toLowerCase()) > -1 ) {
               result.push(value)
             } 
           })
@@ -63,7 +63,7 @@ export default{
       padding: 0 .1rem
   .search-content
     z-index: 1
-    background: green
+    background:green
     overflow: hidden
     position: absolute
     top: 1.58rem
