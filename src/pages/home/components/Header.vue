@@ -3,7 +3,7 @@
 <div class="header-left"><div class="back-icon"><a-icon type="left" /></div></div>
 <div class="header-input"> <a-icon type="search" /> Search Keyword</div>
 <router-link to='/city'>
-<div class="header-right">{{city}} <div class="arrow-icon"><a-icon type="caret-down" /></div></div>
+<div class="header-right">{{this.$store.state.city}} <div class="arrow-icon"><a-icon type="caret-down" /></div></div>
 </router-link>
 </div>
 </template>
@@ -12,7 +12,6 @@
 
 export default {
   name: 'HomeHeader',
-  props: ['city']
 }
 </script>
 

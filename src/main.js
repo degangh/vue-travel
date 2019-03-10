@@ -9,6 +9,7 @@ import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import 'ant-design-vue/dist/antd.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
@@ -21,6 +22,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
 })

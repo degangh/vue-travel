@@ -5,7 +5,7 @@
             <div class="title border-topbottom">Current Location</div>
             <div class="button-list">
                 <div class="button-wrapper">
-                    <div class="button">Adelaide</div>
+                    <div class="button">{{this.$store.state.city}}</div>
                 </div>
             </div>
         </div>
@@ -13,7 +13,11 @@
         <div class="area">
             <div class="title border-topbottom">Hot Places</div>
             <div class="button-list">
-                <div v-for = "item of hotCities" :key = "item.id" class="button-wrapper">
+                <div 
+                v-for = "item of hotCities" 
+                :key = "item.id" 
+                class="button-wrapper"
+                @click="handleCityClick(item.name)">
                     <div class="button">{{item.name}}</div>
                 </div>
                 
@@ -41,6 +45,12 @@ export default{
         hotCities: Array,
         cities: Object,
         letter: String
+    },
+    methods: {
+        handleCityClick (city)
+        {
+            this.$store.dispatch('changeCity', city)
+        }
     },
   name: 'CityList',
   mounted () {
