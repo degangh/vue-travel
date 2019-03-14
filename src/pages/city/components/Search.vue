@@ -5,7 +5,12 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom" v-for = "item in list" :key = "item.id">{{item.name}}</li>
+        <li 
+        class="search-item border-bottom" 
+        v-for = "item in list" 
+        :key = "item.id"
+        @click="handleCityClick(item.name)"
+        >{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">No places found</li>
       </ul>
     </div>
@@ -34,6 +39,13 @@ export default{
     hasNoData () {
       return !this.list.length 
     }
+  },
+  methods : {
+    handleCityClick (city)
+        {
+            this.$store.dispatch('changeCity', city)
+            this.$router.push('/')
+        }
   },
   
   watch: {

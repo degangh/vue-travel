@@ -27,7 +27,12 @@
         <div class="area" v-for = "(item, index) of cities" :key="index" :ref="index.toUpperCase()">
             <div class="title border-topbottom">{{index.toUpperCase()}}</div>
             <div class="item-list">
-                <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</div>
+                <div 
+                class="item border-bottom" 
+                v-for="innerItem of item" 
+                :key="innerItem.id"
+                @click="handleCityClick(innerItem.name)"
+                >{{innerItem.name}}</div>
 
             </div>
         </div>
@@ -50,6 +55,7 @@ export default{
         handleCityClick (city)
         {
             this.$store.dispatch('changeCity', city)
+            this.$router.push('/')
         }
     },
   name: 'CityList',
