@@ -1,16 +1,23 @@
 <template>
-<div class="banner">
-    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/90/de/bb.jpg" class="banner-img"/>    
-    <div class="banner-info">
-        <div class="banner-title"> Lion 360 Experiences</div>
-        <div class="banner-number"><a-icon type="picture" /> 22</div>
+<div>
+    <div class="banner">
+        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/90/de/bb.jpg" class="banner-img"/>    
+        <div class="banner-info">
+            <div class="banner-title"> Lion 360 Experiences</div>
+            <div class="banner-number"><a-icon type="picture" /> 22</div>
+        </div>
     </div>
+    <common-gallery></common-gallery>
 </div>
 </template>
 
 <script>
+import CommonGallery from 'common/gallery/gallery'
 export default{
-    name: 'DetailBanner'
+    name: 'DetailBanner',
+    components: {
+        CommonGallery
+    }
 }
 </script>
 
