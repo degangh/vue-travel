@@ -1,9 +1,9 @@
 <template>
-<div class="container">
+<div class="container" @click="handleGalleryClick">
     <div class="wrapper">
         <a-carousel>
-            <div ><img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/90/de/bb.jpg" class="swiper-image"></div>
-            <div ><img src="https://media-cdn.tripadvisor.com/media/photo-s/12/52/7b/34/small-group-bush-walk.jpg" class="swiper-image"></div>
+            <div v-for = "(img, index) in imgs" :key = "index"><img :src="img" class="swiper-image"></div>
+            
         </a-carousel>
     </div>
 </div>
@@ -11,7 +11,20 @@
 
 <script>
   export default {
-      name: "CommonGallery"
+      name: "CommonGallery",
+      props: {
+        imgs: {
+            type: Array,
+            default () {
+            return []
+        }
+      }
+     },
+     methods: {
+         handleGalleryClick () {
+             this.$emit('closeGallery')
+         }
+     }
   }
 </script>
 
@@ -33,4 +46,6 @@
       width: 100%
       height: 0
       padding-bottom: 90%
+    .wrapper >>> .ant-carousel .slick-dots
+      bottom: 1.2rem !important
 </style>

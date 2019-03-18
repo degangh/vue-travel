@@ -1,13 +1,13 @@
 <template>
 <div>
-    <div class="banner">
+    <div class="banner" @click="handleBannerClick">
         <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/90/de/bb.jpg" class="banner-img"/>    
         <div class="banner-info">
             <div class="banner-title"> Lion 360 Experiences</div>
-            <div class="banner-number"><a-icon type="picture" /> 22</div>
+            <div class="banner-number"><a-icon type="picture" /> {{imgs.length}}</div>
         </div>
     </div>
-    <common-gallery></common-gallery>
+    <common-gallery :imgs="imgs" v-show="showGallery" @closeGallery="handleGalleryClose"></common-gallery>
 </div>
 </template>
 
@@ -17,6 +17,25 @@ export default{
     name: 'DetailBanner',
     components: {
         CommonGallery
+    },
+    data () {
+        return {
+            showGallery: false,
+            imgs: [
+             "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/90/de/bb.jpg",
+             "https://media-cdn.tripadvisor.com/media/photo-s/12/52/7b/34/small-group-bush-walk.jpg",
+             "https://media-cdn.tripadvisor.com/media/photo-s/16/23/34/93/giraffe-safari-and-a.jpg"
+            ]
+        }
+    },
+    methods: {
+        handleBannerClick () {
+            this.showGallery = true
+        },
+
+        handleGalleryClose () {
+            this.showGallery = false
+        }
     }
 }
 </script>
