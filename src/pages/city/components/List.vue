@@ -56,6 +56,7 @@ export default{
         {
             this.$store.dispatch('changeCity', city)
             this.$router.push('/')
+            console.log(city)
         }
     },
   name: 'CityList',
