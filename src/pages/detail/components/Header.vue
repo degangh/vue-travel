@@ -1,9 +1,9 @@
 <template>
 <div>
-    <router-link tag='div' to="/" class="header-abs">
+    <router-link tag='div' to="/" class="header-abs" v-show="showAbs">
       <div class="header-abs-back"><a-icon type="left" /></div>
     </router-link>
-    <div class="header-fixed">
+    <div class="header-fixed" v-show="!showAbs">
       <div class="header-fixed-back"><a-icon type="left" /></div>
       Detail
     </div>
@@ -13,7 +13,23 @@
 <script>
 
 export default{
-    name: 'DetailHeader'
+  name: 'DetailHeader',
+
+  data () {
+    return {
+      showAbs: true
+    }
+  },
+  methods: {
+    handleScroll () {
+      console.log('oops')
+      console.log(document.documentElement.scrollTop)
+    }
+  },
+  activated () {
+    console.log('oops')
+    window.addEventListener('scroll' , this.handleScroll)
+  },
     
 }
 </script>
