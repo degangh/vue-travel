@@ -3,7 +3,7 @@
 <detail-banner></detail-banner>
 <detail-header></detail-header>
 <div class='content'>
-    <detail-list></detail-list>
+    <detail-list :list = "list"></detail-list>
 </div>
 </div>
 </template>
@@ -18,6 +18,16 @@ export default {
         DetailBanner,
         DetailHeader,
         DetailList
+    },
+    data () {
+        return {
+            list: [
+                {title: 'Adult'},
+                {title: 'Student'},
+                {title: 'Concession'},
+                {title: 'Family Pack'}
+            ]
+        }
     }
 }
 </script>
