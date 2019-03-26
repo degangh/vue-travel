@@ -22,7 +22,22 @@ export default {
     data () {
         return {
             list: [
-                {title: 'Adult'},
+                {
+                    title: 'Adult',
+                    children: [
+                        {
+                            title: "Day Tour",
+                            children: [
+                                {
+                                    title: "Day Tour - Public Holiday"
+                                }
+                            ]
+                        },
+                        {
+                            title: "Day Tour + Lunch"
+                        }
+                    ]
+                    },
                 {title: 'Student'},
                 {title: 'Concession'},
                 {title: 'Family Pack'}
