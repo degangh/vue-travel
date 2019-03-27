@@ -12,12 +12,32 @@
 import DetailBanner from './components/Banner.vue'
 import DetailHeader from './components/Header.vue'
 import DetailList from './components/List.vue'
+import axios from 'axios'
 export default {
     name: 'Detail',
     components: {
         DetailBanner,
         DetailHeader,
         DetailList
+    },
+    methods: {
+        getDetailInfo() {
+            axios.get('/api/detail.json?id=' , {
+                params: {
+                    id: this.$route.params.id
+                }
+            }).then(this.getDetailDataSucc).fail(console.log('oops'))
+        }, 
+
+        getDetailDataSucc (res) {
+            res = res.data
+            if (ret && res.data) {
+                const data = res.data
+            }
+        }
+    },
+    mounted () {
+        this.getDetailInfo()
     },
     data () {
         return {
