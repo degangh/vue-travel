@@ -1,13 +1,13 @@
 <template>
 <div>
     <div class="banner" @click="handleBannerClick">
-        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/90/de/bb.jpg" class="banner-img"/>    
+        <img :src="bannerImg" class="banner-img"/>    
         <div class="banner-info">
-            <div class="banner-title"> Lion 360 Experiences</div>
-            <div class="banner-number"><a-icon type="picture" /> {{imgs.length}}</div>
+            <div class="banner-title"> {{this.sightName}}</div>
+            <div class="banner-number"><a-icon type="picture" /> {{this.bannerImgs.length}}</div>
         </div>
     </div>
-    <common-gallery :imgs="imgs" v-show="showGallery" @closeGallery="handleGalleryClose"></common-gallery>
+    <common-gallery :imgs="bannerImgs" v-show="showGallery" @closeGallery="handleGalleryClose"></common-gallery>
 </div>
 </template>
 
@@ -18,14 +18,14 @@ export default{
     components: {
         CommonGallery
     },
+    props:{
+        sightName: String,
+        bannerImg: String,
+        bannerImgs: Array
+    },
     data () {
         return {
-            showGallery: false,
-            imgs: [
-             "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/90/de/bb.jpg",
-             "https://media-cdn.tripadvisor.com/media/photo-s/12/52/7b/34/small-group-bush-walk.jpg",
-             "https://media-cdn.tripadvisor.com/media/photo-s/16/23/34/93/giraffe-safari-and-a.jpg"
-            ]
+            showGallery: false
         }
     },
     methods: {
